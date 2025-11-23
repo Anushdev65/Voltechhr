@@ -97,16 +97,16 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
               <li className="flex gap-2 opacity-80">
-                <MapPin size={16} className="flex-shrink-0 mt-0.5" />
-                <span>Kathmandu, Nepal</span>
+                <MapPin size={16} className="shrink-0 mt-0.5" />
+                <span> Tarahall Chowk, Sinamangal-9, Kathmandu, Nepal</span>
               </li>
               <li className="flex gap-2 opacity-80">
-                <Mail size={16} className="flex-shrink-0 mt-0.5" />
+                <Mail size={16} className="shrink-0 mt-0.5" />
                 <span className="break-all">info@voltechhr.com</span>
               </li>
               <li className="flex gap-2 opacity-80">
-                <Phone size={16} className="flex-shrink-0 mt-0.5" />
-                <span>+977-1-XXXX-XXXX</span>
+                <Phone size={16} className="shrink-0 mt-0.5" />
+                <span>+977-01-5928510</span>
               </li>
             </ul>
           </div>

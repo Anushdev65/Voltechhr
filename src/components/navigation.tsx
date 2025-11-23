@@ -18,65 +18,71 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
+    <nav className="sticky top-0 z-50 bg-white shadow-md border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <Link
-            href="/"
-            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
-          >
+        <div className="flex items-center h-20">
+          {/* LOGO (shift slightly left) */}
+          <Link href="/" className="mr-6 shrink-0">
             <Image
               src="/voltech-logo.png"
               alt="Voltech Logo"
-              width={40}
-              height={40}
+              width={300}
+              height={150}
+              className="transition-transform duration-300 hover:scale-105"
             />
           </Link>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex gap-8">
+          {/* DESKTOP NAV */}
+          <div className="hidden md:flex items-center gap-6 ml-10">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium hover:text-primary transition-colors duration-200"
+                className="px-2 py-2 text-lg font-semibold text-gray-600 hover:text-primary transition-colors relative group"
               >
                 {item.label}
+                <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-primary transition-all duration-300 group-hover:w-full" />
               </Link>
             ))}
           </div>
 
-          {/* CTA Button */}
-          <Link
-            href="/contact"
-            className="hidden sm:inline-block px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all duration-200 hover:shadow-lg text-sm font-medium"
-          >
-            Get Started
-          </Link>
+          {/* CTA BUTTON - aligned far right */}
+          <div className="ml-auto">
+            <Link
+              href="/contact"
+              className="hidden sm:inline-flex items-center justify-center px-6 py-2.5 bg-primary text-white rounded-lg hover:bg-primary/90 transition-all text-sm font-semibold"
+            >
+              Get Started
+            </Link>
+          </div>
 
-          {/* Mobile Menu Button */}
-          <button className="md:hidden p-2" onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          {/* MOBILE TOGGLE */}
+          <button
+            className="md:hidden ml-auto p-2 text-gray-700 hover:text-primary transition-colors"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* MOBILE MENU */}
         {isOpen && (
-          <div className="md:hidden pb-4 space-y-2 transition-all duration-200">
+          <div className="md:hidden pb-4 space-y-1 bg-gray-50 border-t border-gray-200">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="block px-3 py-2 text-sm font-medium hover:bg-muted rounded transition-colors"
                 onClick={() => setIsOpen(false)}
+                className="block px-4 py-3 text-sm font-semibold text-gray-700 hover:text-primary hover:bg-gray-100 rounded-md"
               >
                 {item.label}
               </Link>
             ))}
+
             <Link
               href="/contact"
-              className="block px-3 py-2 bg-primary text-primary-foreground rounded text-sm font-medium"
               onClick={() => setIsOpen(false)}
+              className="block px-4 py-3 bg-primary text-white text-center rounded-md text-sm font-semibold mt-3 hover:bg-primary/90"
             >
               Get Started
             </Link>

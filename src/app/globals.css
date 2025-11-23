@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap");
 @import "tailwindcss";
 
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  /* Albescent white palette provided by user */
+
   --background: oklch(0.98 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -88,6 +91,18 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
+  --color-albescent-white-50: #faf7f2;
+  --color-albescent-white-100: #f3ede1;
+  --color-albescent-white-200: #ebe0cc;
+  --color-albescent-white-300: #d7c09a;
+  --color-albescent-white-400: #c6a071;
+  --color-albescent-white-500: #ba8955;
+  --color-albescent-white-600: #ad7649;
+  --color-albescent-white-700: #905f3e;
+  --color-albescent-white-800: #744e38;
+  --color-albescent-white-900: #5f402f;
+  --color-albescent-white-950: #322018;
 }
 
 @layer base {
@@ -96,9 +111,12 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: "Poppins", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+      Roboto, "Helvetica Neue", Arial;
   }
 }
 
 html {
-  scroll-behavior: smooth;
+  overflow-y: scroll; /* always reserve space for scrollbar */
+  scrollbar-gutter: stable;
 }
