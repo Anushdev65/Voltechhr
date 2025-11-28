@@ -2,13 +2,13 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <section className="py-12 sm:py-16 md:py-24 lg:py-32 bg-muted border-l-2 sm:border-l-4 border-primary">
+    <section className="pt-8 pb-12 sm:pt-10 sm:pb-16 md:pt-14 md:pb-20 lg:pt-16 lg:pb-24 border-l-2 sm:border-l-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
           {/* Left Content */}
           <div className="space-y-4 sm:space-y-6">
             <div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary sm:mb-4">
                 About Voltech HR
               </h2>
               <p className="text-sm sm:text-base text-foreground/80 leading-relaxed mb-3 sm:mb-4">

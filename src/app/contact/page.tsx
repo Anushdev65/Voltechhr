@@ -13,14 +13,13 @@ export default function ContactPage() {
             <div className="flex items-start gap-4">
               {/* LEFT VERTICAL BAR */}
               <div className="h-full w-1 bg-primary rounded-full" />
-              <div className="h-15 w-1 bg-primary rounded-full"></div>
+              <div className="h-15 w-1 bg-primary rounded-full" />
               {/* HEADING + UNDERLINE */}
               <div>
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground">
                   Contact Us
                 </h1>
 
-                {/* underline */}
                 <div className="mt-2 h-1 w-20 rounded-full bg-primary" />
 
                 <p className="mt-4 text-lg sm:text-xl text-muted-foreground max-w-2xl">
@@ -31,7 +30,7 @@ export default function ContactPage() {
           </div>
         </section>
 
-        {/* Contact Section */}
+        {/* Contact Section (map + form side by side) */}
         <Contact />
       </main>
     </>

@@ -1,5 +1,3 @@
-"use client";
-
 import { Mail, Phone, MapPin } from "lucide-react";
 
 export default function Contact() {
@@ -8,62 +6,91 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-10 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground">
-            Get In Touch
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary">
+            Visit Our Office & Get In Touch
           </h2>
 
-          {/* Underline */}
-          <div className="mt-2 h-1 w-20 bg-primary rounded-full mx-auto" />
-
           <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mt-3">
-            Ready to find the right talent? Contact us today.
+            Located in the heart of Kathmandu, we&apos;re ready to meet your
+            workforce needs. Reach out to us using the form or visit us in
+            person.
           </p>
         </div>
 
-        {/* Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
-          {/* Contact Info */}
+        {/* Map + Form Side by Side */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+          {/* LEFT: Map + Contact Info */}
           <div className="space-y-6">
-            <div className="flex gap-4">
-              <MapPin className="w-6 h-6 text-primary shrink-0 mt-1" />
-              <div>
-                <h3 className="text-base font-semibold text-foreground mb-1">
-                  Address
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                  Tarahall Chowk, Sinamangal-9, Kathmandu, Nepal
-                </p>
-              </div>
+            {/* Map Card */}
+            <div className="rounded-xl overflow-hidden shadow-lg border border-border bg-card h-80 sm:h-96 md:h-[420px]">
+              <iframe
+                // Search-based embed so it always points to Voltech
+                src="https://www.google.com/maps?q=Voltech+Human+Resource+Pvt+Ltd,+Sinamangal-9,+Kathmandu,+Nepal&output=embed&z=16"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-full"
+              />
             </div>
 
-            <div className="flex gap-4">
-              <Mail className="w-6 h-6 text-primary shrink-0 mt-1" />
-              <div>
-                <h3 className="text-base font-semibold text-foreground mb-1">
-                  Email
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                  info@voltechhr.com
-                </p>
+            {/* Contact Info */}
+            <div className="space-y-5">
+              <div className="flex gap-4">
+                <MapPin className="w-6 h-6 text-primary shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-base font-semibold text-foreground mb-1">
+                    Address
+                  </h3>
+                  <a
+                    href="https://maps.app.goo.gl/33duJSifRRhA46a58"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-muted-foreground hover:text-primary underline-offset-2 hover:underline"
+                  >
+                    Sinamangal-9, Kathmandu 44600, Nepal
+                  </a>
+                </div>
               </div>
-            </div>
 
-            <div className="flex gap-4">
-              <Phone className="w-6 h-6 text-primary shrink-0 mt-1" />
-              <div>
-                <h3 className="text-base font-semibold text-foreground mb-1">
-                  Phone
-                </h3>
-                <p className="text-sm text-muted-foreground">+977-01-5928510</p>
+              <div className="flex gap-4">
+                <Mail className="w-6 h-6 text-primary shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-base font-semibold text-foreground mb-1">
+                    Email
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    info@voltechhr.com
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <Phone className="w-6 h-6 text-primary shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-base font-semibold text-foreground mb-1">
+                    Phone
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    +977-01-5928510
+                  </p>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Contact Form */}
+          {/* RIGHT: Contact Form */}
           <form
             action="https://formsubmit.co/info@voltechhr.com"
             method="POST"
-            className="lg:col-span-2 space-y-4"
+            className="
+                rounded-xl shadow-lg border border-border bg-card
+                h-80 sm:h-96 md:h-[420px]
+                p-4 sm:p-6
+                flex flex-col space-y-4
+"
           >
             {/* Hidden settings for FormSubmit */}
             <input type="hidden" name="_captcha" value="false" />
@@ -129,7 +156,17 @@ export default function Contact() {
             {/* Submit button */}
             <button
               type="submit"
-              className="w-full px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium text-lg"
+              className="
+    w-full sm:w-auto
+    px-10 py-3 
+    bg-primary text-primary-foreground 
+    rounded-lg 
+    hover:bg-primary/90 
+    transition-all 
+    font-medium text-lg 
+    mx-auto block 
+    mt-4
+  "
             >
               Send Message
             </button>

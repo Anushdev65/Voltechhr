@@ -29,10 +29,10 @@ const steps = [
 
 export default function RecruitmentProcess() {
   return (
-    <section className="py-16 bg-background">
+    <section className="py-5 bg-background">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-primary mb-2">
+          <h2 className="text-4xl font-bold text-primary mb-12">
             Our Recruitment Process
           </h2>
           <div className="h-1 w-24 bg-accent mx-auto"></div>

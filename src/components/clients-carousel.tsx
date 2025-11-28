@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 
-const companies = Array.from({ length: 23 }, (_, i) => ({
+const companies = Array.from({ length: 24 }, (_, i) => ({
   id: i + 1,
   name: `Company ${i + 1}`,
   logo: `/companies-logo/company${i + 1}.png`,

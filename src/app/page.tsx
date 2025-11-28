@@ -9,7 +9,7 @@ import ClientsCarousel from "@/components/clients-carousel";
 
 export default function Home() {
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <Hero />
       <Services />
       <About />

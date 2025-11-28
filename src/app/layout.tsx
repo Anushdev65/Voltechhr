@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/next";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import "./globals.css";
+import InitialLoader from "@/components/initial-loader";
 
 // const _geist = Geist({ subsets: ["latin"] });
 // const _geistMono = Geist_Mono({ subsets: ["latin"] });
@@ -26,7 +27,9 @@ export default function RootLayout({
         className={`font-sans antialiased min-h-screen bg-background text-foreground `}
       >
         <Navigation />
-        <main>{children}</main>
+        <main>
+          <InitialLoader>{children}</InitialLoader>
+        </main>
         <Footer />
         <Analytics />
       </body>

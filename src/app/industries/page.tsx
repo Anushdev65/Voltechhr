@@ -170,15 +170,6 @@ export default function IndustriesPage() {
                     key={index}
                     className="group overflow-hidden rounded-lg border border-border hover:shadow-lg hover:border-primary/30 transition-all bg-card flex flex-col h-full"
                   >
-                    <div className="relative h-32 md:h-40 lg:h-48 overflow-hidden bg-muted">
-                      {/* <img
-                        src={`/.jpg?key=x9v9c&height=192&width=400&query=${encodeURIComponent(
-                          industry.image
-                        )}`}
-                        alt={industry.name}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      /> */}
-                    </div>
                     <div className="p-4 md:p-6 lg:p-8 flex-1 flex flex-col">
                       <div className="mb-3 md:mb-4 lg:mb-6 flex items-center justify-center w-10 md:w-12 lg:w-16 h-10 md:h-12 lg:h-16 rounded-lg bg-primary/10 mx-auto">
                         <IconComponent className="w-5 md:w-6 lg:w-8 h-5 md:h-6 lg:h-8 text-primary" />
